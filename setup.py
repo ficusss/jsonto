@@ -10,5 +10,5 @@ with open("requirements.txt", "r") as requirements:
         maintainer="ficusss",
         packages=find_packages(),
         python_requires='>=3.6',
-        install_requires=reqirements.readlines(),
+        install_requires=requirements.readlines(),
     )
