@@ -16,7 +16,7 @@ def to_json(xml_config: Union[str, ET._Element]) -> dict:
             XML_CONFIG.get("TAIL_KEY"): tag.tail.split("\n") if tag.tail else [],
             XML_CONFIG.get("ATTRIBUTE_KEY"): tag.attrib,
         }
-        for subtag in tag.iter():
+        for subtag in tag:
             json_result[subtag.tag] = to_json_back(subtag)
         return json_result
 
